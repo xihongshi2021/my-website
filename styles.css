@@ -1,4 +1,3 @@
-/* 定义 Wand 风格的全局流光渐变背景 */
 body {
     background: linear-gradient(-45deg, #4158D0, #C850C0, #FFCC70, #23a6d5);
     background-size: 400% 400%;
@@ -9,14 +8,12 @@ body {
     z-index: 0;
 }
 
-/* 动画关键帧：背景循环流动 */
 @keyframes flowingLight {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* 添加 Q 版拟南芥（左侧笑脸款）作为固定背景点缀 */
 body::before {
     content: "";
     position: fixed;
@@ -25,16 +22,14 @@ body::before {
     width: 250px;        
     height: 300px;
     background-image: url('arabidopsis-q.png');
-    /* 核心技巧：放大200%并靠左对齐，完美隐藏掉右边那株 */
     background-size: 200% auto; 
     background-position: left center; 
     background-repeat: no-repeat;
-    opacity: 0.6;        /* 60%透明度，若隐若现 */
+    opacity: 0.6; 
     z-index: -1;         
     pointer-events: none;
 }
 
-/* 顶部导航栏毛玻璃特效 */
 .navbar {
     background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(15px);
@@ -42,7 +37,6 @@ body::before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Quarto 主内容区毛玻璃特效 (Frosted Glass) */
 main {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
@@ -54,13 +48,11 @@ main {
     margin-top: 3vh;
 }
 
-/* 调整文字颜色与阴影，确保在亮色背景下清晰可读 */
 h1, h2, h3, p, li, a {
     color: #ffffff !important;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-/* 头像悬浮动效 */
 img {
     transition: transform 0.4s ease;
 }
